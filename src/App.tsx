@@ -1,6 +1,11 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { BrowserRouter as Router, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { Recharts } from './Recharts';
+
+const ROUTES = {
+  RECHARTS: '/recharts',
+};
 
 function App() {
   return (
@@ -13,18 +18,15 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
+              <Link to={ROUTES.RECHARTS}>recharts</Link>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          {/* <Route path="/">
-            <Home />
-          </Route> */}
+          <Route path={ROUTES.RECHARTS}>
+            <Recharts />
+          </Route>
         </Switch>
       </div>
     </Router>
