@@ -1,9 +1,11 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { BrowserRouter as Router, Link, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
+      <CssBaseline />
       <div>
         <nav>
           <ul>
